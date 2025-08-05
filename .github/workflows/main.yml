@@ -1,22 +1,38 @@
+name: Deploy React App to GitHub Pages
 
-name: CI/CD Pipeline
-
+# Controls when the workflow will run
 on:
   push:
     branches:
-      - main # Trigger the workflow on pushes to the main branch
+      - main # Trigger the workflow on pushes to the 'main' branch
 
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest # Specify the operating system for the job
 
     steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v4 # Action to checkout your repository code
+      - name: Checkout Repository # Step to get your code from the repository
+        uses: actions/checkout@v4
 
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3 # Action for deploying to GitHub Pages
+      - name: Setup Node.js # Step to set up the Node.js environment
+        uses: actions/setup-node@v4
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }} # GitHub token for authentication
-          publish_dir: ./ # Directory to publish (your project's root for this ToDo app)
-          # If your static files are in a 'dist' or 'build' folder, change 'publish_dir' accordingly.
+          node-version: '18' # Use Node.js version 18 (or a version compatible with your React app)
+
+      - name: Install Dependencies # Step to install your project's npm dependencies
+        run: npm install
+
+      - name: Build React Application # Step to build your React app for production
+        run: npm run build # This command creates the 'build' folder with optimized static assets
+
+      - name: Deploy to GitHub Pages # Step to deploy the 'build' folder to the gh-pages branch
+        uses: peaceiris/actions-gh-pages@v3 # This action handles the deployment to gh-pages branch
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }} # The default GitHub token, automatically provided
+          publish_dir: ./build # The directory containing your built static files (React's default build output)
+          # If your React app uses client-side routing (e.g., React Router), you might need
+          # to add a .nojekyll file to the build directory before deployment, or configure
+          # your router to use HashRouter or handle 404s. The peaceiris action can add .nojekyll:
+          # cname: your-custom-domain.com # Uncomment and replace if you have a custom domain
+          # enable_jekyll: true # Set to false if you don't want Jekyll processing (default for static sites)
