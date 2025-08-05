@@ -22,6 +22,7 @@ jobs:
 
       - name: Install Dependencies # Step to install your project's npm dependencies
         run: npm install
+        working-directory: ./ToDo_Application
 
       - name: Build React Application # Step to build your React app for production
         run: npm run build # This command creates the 'build' folder with optimized static assets
