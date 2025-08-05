@@ -26,6 +26,7 @@ jobs:
 
       - name: Build React Application # Step to build your React app for production
         run: npm run build # This command creates the 'build' folder with optimized static assets
+        working-directory: ./ToDo_Application
 
       - name: Deploy to GitHub Pages # Step to deploy the 'build' folder to the gh-pages branch
         uses: peaceiris/actions-gh-pages@v3 # This action handles the deployment to gh-pages branch
