@@ -2,6 +2,8 @@
   "name": "todoapp",
   "version": "0.1.0",
   "private": true,
+  // Inside your package.json
+"homepage": "https://huss166.github.io/Git_CSE_B",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
