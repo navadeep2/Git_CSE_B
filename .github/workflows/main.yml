@@ -32,7 +32,7 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3 # This action handles the deployment to gh-pages branch
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }} # The default GitHub token, automatically provided
-          publish_dir: ./build # The directory containing your built static files (React's default build output)
+          publish_dir: .ToDo_Application/build # The directory containing your built static files (React's default build output)
           # If your React app uses client-side routing (e.g., React Router), you might need
           # to add a .nojekyll file to the build directory before deployment, or configure
           # your router to use HashRouter or handle 404s. The peaceiris action can add .nojekyll:
