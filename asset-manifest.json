@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Git_CSE_B/static/css/main.8147fbff.css",
+    "main.js": "/Git_CSE_B/static/js/main.09dab340.js",
+    "index.html": "/Git_CSE_B/index.html",
+    "main.8147fbff.css.map": "/Git_CSE_B/static/css/main.8147fbff.css.map",
+    "main.09dab340.js.map": "/Git_CSE_B/static/js/main.09dab340.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.8147fbff.css",
+    "static/js/main.09dab340.js"
+  ]
+}
