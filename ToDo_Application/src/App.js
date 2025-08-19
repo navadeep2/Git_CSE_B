@@ -26,10 +26,10 @@ function App() {
     <div className="main-container"> {/* Main container for styling */}
       <div className="center-container"> {/* Centered container */}
         <div>
-          <h1>Todo List</h1> {/* Heading */}
+          <h1>Todo List New</h1> {/* Heading */}
         </div>
         <TodoInput addList={addList} /> {/* TodoInput component for adding new todos */}
-        <h1 className="app-heading">TODO</h1> {/* Heading for list */}
+        <h1 className="app-heading">TODO 1</h1> {/* Heading for list */}
         <hr /> {/* Horizontal line */}
         {/* Mapping through listTodo to render each todo */}
         {listTodo.map((listItem, i) => {
