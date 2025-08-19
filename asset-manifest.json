@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/Git_CSE_B/static/css/main.8147fbff.css",
-    "main.js": "/Git_CSE_B/static/js/main.b1cbb1f7.js",
+    "main.js": "/Git_CSE_B/static/js/main.d52c946e.js",
     "index.html": "/Git_CSE_B/index.html",
     "main.8147fbff.css.map": "/Git_CSE_B/static/css/main.8147fbff.css.map",
-    "main.b1cbb1f7.js.map": "/Git_CSE_B/static/js/main.b1cbb1f7.js.map"
+    "main.d52c946e.js.map": "/Git_CSE_B/static/js/main.d52c946e.js.map"
   },
   "entrypoints": [
     "static/css/main.8147fbff.css",
-    "static/js/main.b1cbb1f7.js"
+    "static/js/main.d52c946e.js"
   ]
 }
